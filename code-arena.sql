@@ -1,6 +1,7 @@
 CREATE TYPE rol_enum AS ENUM ('ADMIN', 'PLAYER');
 CREATE TYPE dificultad_enum AS ENUM ('EASY', 'MEDIUM', 'HARD', 'LEGENDARY');
 CREATE TYPE estado_enum AS ENUM ('ACCEPTED', 'IN_PROGRESS', 'SUBMITTED', 'APPROVED', 'REJECTED');
+CREATE TYPE nivel_enum AS ENUM ('ROOKIE', 'JUNIOR', 'DEVELOPER', 'SENIOR', 'MASTER', 'LEGEND');
 
 CREATE TABLE usuario (
     id SERIAL PRIMARY KEY,
@@ -9,7 +10,7 @@ CREATE TABLE usuario (
     correo_electronico VARCHAR(150) NOT NULL UNIQUE,
     contrasena VARCHAR(255) NOT NULL,
     rol rol_enum NOT NULL DEFAULT 'PLAYER',
-    nivel INT NOT NULL DEFAULT 1,
+    nivel nivel_enum NOT NULL DEFAULT 'ROOKIE',
     experiencia_acumulada INT NOT NULL DEFAULT 0,
     estado BOOLEAN NOT NULL DEFAULT TRUE
 );

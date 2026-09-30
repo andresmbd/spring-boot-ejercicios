@@ -1,14 +1,12 @@
 package com.mi_app.code_arena.domain.model;
 
 import com.mi_app.code_arena.shared.enums.Estado;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Data @Builder @NoArgsConstructor @AllArgsConstructor
+@Setter
+@Getter @Builder @NoArgsConstructor @AllArgsConstructor
 public class ParticipacionReto {
     private Integer id;
     private Usuario usuario;

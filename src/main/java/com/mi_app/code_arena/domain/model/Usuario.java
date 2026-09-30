@@ -1,12 +1,11 @@
 package com.mi_app.code_arena.domain.model;
 
+import com.mi_app.code_arena.shared.enums.Nivel;
 import com.mi_app.code_arena.shared.enums.Rol;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data @Builder @AllArgsConstructor @NoArgsConstructor
+@Setter @Getter
+@Builder @AllArgsConstructor @NoArgsConstructor
 public class Usuario {
     private Integer id;
     private  String nombre;
@@ -14,8 +13,7 @@ public class Usuario {
     private String correoElectronico;
     private String contrasena;
     private Rol rol;
-    private Integer nivel;
-    private Integer experienciaAcomulada;
+    private Nivel nivel;
+    private Integer experienciaAcumulada;
     private Boolean estado;
-
 }
