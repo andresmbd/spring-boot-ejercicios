@@ -1,12 +1,28 @@
 package com.mi_app.code_arena.domain.model;
 
+import com.mi_app.code_arena.domain.exception.InvalidDataEnterException;
 import lombok.*;
 
-@Setter
-@Getter @Builder @AllArgsConstructor @NoArgsConstructor
+
+
 public class Categoria {
-    private Integer id;
+    private Long id;
     private String nombre;
+
+    public Categoria(Long id, String nombre){
+        if (nombre == null || nombre.isBlank())
+            throw new InvalidDataEnterException("Name is required!");
+        this.id = id;
+        this.nombre=nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
 /*
 crear por defecto en bd las categorias :

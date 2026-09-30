@@ -1,4 +1,4 @@
-package com.mi_app.code_arena.domain.ports.in.reto;
+package com.mi_app.code_arena.application.ports.in.reto;
 
 import com.mi_app.code_arena.domain.model.Reto;
 
